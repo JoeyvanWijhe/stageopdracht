@@ -1,43 +1,96 @@
-/* global.css */
+/* Algemeen */
 body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
+    background: #f4f4f9;
     color: #333;
+    line-height: 1.6;
 }
 
 main {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-input {
-    width: 80%;
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header .search {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+header input {
     padding: 0.5rem;
-    margin-right: 0.5rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
+    flex: 1;
+    max-width: 300px;
 }
 
-button {
+header button {
     padding: 0.5rem 1rem;
     background-color: #007bff;
-    color: #fff;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-button:hover {
+header button:hover {
     background-color: #0056b3;
 }
 
-p {
-    font-size: 1.2rem;
+/* Weerkaart */
+.weather-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.weather-card h2 {
+    margin-top: 0;
+}
+
+/* Voorspelling */
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.forecast-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsiviteit */
+@media (max-width: 600px) {
+    header input {
+        width: 100%;
+    }
+
+    .forecast-grid {
+        grid-template-columns: 1fr;
+    }
 }
